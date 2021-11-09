@@ -63,17 +63,17 @@ public class Homework1 {
         int salaryMasha = mashaRuble * percentRise / percent;
         int salaryDenis = denisRruble * percentRise / percent;
         int salaryKris = krisRuble * percentRise / percent;
-        int salaryYearUpMasha = (mashaRuble + salaryMasha);
-        int salaryYearUpDenis = (denisRruble + salaryDenis);
-        int salaryYearUpKris = (krisRuble + salaryKris);
+        int salaryMonthUpMasha = (mashaRuble + salaryMasha);
+        int salaryMonthUpDenis = (denisRruble + salaryDenis);
+        int salaryMonthUpKris = (krisRuble + salaryKris);
         int differenceMasha = salaryMasha * 12;
         int differenceDenis = salaryDenis * 12;
         int differenceKris = salaryKris * 12;
-        System.out.println ("Маша теперь получает, руб =" + salaryYearUpMasha);
+        System.out.println ("Маша теперь получает, руб =" + salaryMonthUpMasha);
         System.out.println ("Годовой доход Маши вырос на, руб =" + differenceMasha);
-        System.out.println("Денис теперь получает, руб =" + salaryYearUpDenis);
+        System.out.println("Денис теперь получает, руб =" + salaryMonthUpDenis);
         System.out.println("Годовой доход Дениса вырос на, руб =" + differenceDenis);
-        System.out.println("Кристина теперь получает, руб =" + salaryYearUpKris);
+        System.out.println("Кристина теперь получает, руб =" + salaryMonthUpKris);
         System.out.println("Годовой доход Кристины вырос на, руб =" + differenceKris);
 
         //Задача 6
