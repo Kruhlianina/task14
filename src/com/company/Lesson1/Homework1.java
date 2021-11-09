@@ -63,26 +63,17 @@ public class Homework1 {
         int salaryMasha = mashaRuble * percentRise / percent;
         int salaryDenis = denisRruble * percentRise / percent;
         int salaryKris = krisRuble * percentRise / percent;
-        int salaryYearMasha = mashaRuble * 12;
-        int salaryYearDenis = denisRruble * 12;
-        int salaryYearKris = krisRuble * 12;
-        int salaryYearUpMasha = (mashaRuble + salaryMasha) * 12;
-        int salaryYearUpDenis = (denisRruble + salaryDenis) * 12;
-        int salaryYearUpKris = (krisRuble + salaryKris) * 12;
-        int differenceMasha = salaryYearUpMasha - salaryYearMasha;
-        int differenceDenis = salaryYearUpDenis - salaryYearDenis;
-        int differenceKris = salaryYearUpKris - salaryYearKris;
-        System.out.println("+10% к з/п Маши в месяц, руб =" + salaryMasha);
-        System.out.println("+10% к з/п Дениса, руб =" + salaryDenis);
-        System.out.println("+10% к з/п Кристины, руб =" + salaryKris);
-        System.out.println("З/п Маши в год без повышения, руб =" + salaryYearMasha);
-        System.out.println("З/п Дениса в год без повышения, руб =" + salaryYearDenis);
-        System.out.println("З/п Кристины в год без повышения, руб =" + salaryYearKris);
-        System.out.println("Маша теперь получает, руб =" + salaryYearUpMasha);
+        int salaryYearUpMasha = (mashaRuble + salaryMasha);
+        int salaryYearUpDenis = (denisRruble + salaryDenis);
+        int salaryYearUpKris = (krisRuble + salaryKris);
+        int differenceMasha = salaryMasha * 12;
+        int differenceDenis = salaryDenis * 12;
+        int differenceKris = salaryKris * 12;
+        System.out.println ("Маша теперь получает, руб =" + salaryYearUpMasha);
+        System.out.println ("Годовой доход Маши вырос на, руб =" + differenceMasha);
         System.out.println("Денис теперь получает, руб =" + salaryYearUpDenis);
-        System.out.println("Кристина теперь получает, руб =" + salaryYearUpKris);
-        System.out.println("Годовой доход Маши вырос на, руб =" + differenceMasha);
         System.out.println("Годовой доход Дениса вырос на, руб =" + differenceDenis);
+        System.out.println("Кристина теперь получает, руб =" + salaryYearUpKris);
         System.out.println("Годовой доход Кристины вырос на, руб =" + differenceKris);
 
         //Задача 6
