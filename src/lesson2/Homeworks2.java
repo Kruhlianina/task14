@@ -4,33 +4,30 @@ public class Homeworks2 {
     public static void main(String[] args) {
 
         // Задание 1
-        int clientOS = 1;
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
+        int clientOS = 0;
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         //Задание  2
-        int clientOS1 = 0;
-        int cleentDeviceYear1 = 2020;
-        switch (clientOS1) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                if (cleentDeviceYear1 > 2019) {
-                    System.out.println("Установите Lite-версию приложения для iOS по ссылке");
-                }
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                if (cleentDeviceYear1 < 2019) {
-                    System.out.println("Установите Lite-версию приложения для Android по ссылке");
-                } else {
-                    System.out.println("Установите версию приложения для iOS по ссылке");
-                }
+        int cleentDeviceYear1 = 2015;
+        if (clientOS == 1) {
+            if (cleentDeviceYear1 <= 2019) {
+                System.out.println("Установите Lite-версию приложения для iOS по ссылке...");
+            } else {
+                System.out.println("Установите версию приложения для iOS по ссылке...");
+            }
+        } else if (cleentDeviceYear1 >= 2019) {
+
+            System.out.println("Установите версию приложения для Android по ссылке...");
+        } else {
+            System.out.println("Установите lite-версию приложения для Android по ссылке...");
+
         }
+
+
 
         // Задание 3
         int year = 2024;
@@ -84,14 +81,14 @@ public class Homeworks2 {
         int salary = 58_000;
         double limit = 0;
         if (age <= 23) {
-            limit = limit * 2;
+            limit = salary * 2;
         } else {
             limit = salary * 3;
         }
-        if (salary > 50_000 && salary < 80_000) {
-            limit = limit * 1.2;
-        } else if (salary > 80_000) {
-            limit = limit * 1.5;
+        if (salary < 80_000) {
+            limit *= 1.5;
+        } else if (salary > 50_000) {
+            limit *= 1.2;
         }
         System.out.println("Мы готовы выдать Вам кредитную карту с лимитом =" + limit + "рублей");
 
@@ -104,16 +101,16 @@ public class Homeworks2 {
         double maxMonthPayment = salary1 / 2;
         double monthPayment = 0;
         if (age1 < 23) {
-            baseState = baseState + 1;
+            baseState += 1;
         } else if (age1 < 30) {
-            baseState = baseState + 0.5;
+            baseState += 0.5;
         }
         if (salary1 > 80_000) {
-            baseState = baseState - 0.7;
+            baseState -= 0.7;
         }
         monthPayment = wantedSum * (1 + baseState / 100) / term;
         if (wantedSum * (1 + baseState / 100) > maxMonthPayment * term) {
-            System.out.println("Максимальный платеж при ЗП " + salary1 + "равен" + maxMonthPayment + "рублей. Платеж по кредиту" + monthPayment);
+            System.out.println("В кредите отказано");
         } else {
             System.out.println("Максимальный платеж при ЗП " + salary1 + "равен" + maxMonthPayment + "рублей. Платеж по кредиту" + monthPayment);
         }
